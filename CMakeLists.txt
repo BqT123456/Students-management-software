@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.23)
+cmake_minimum_required(VERSION 3.20)
 project(Students_management_software C)
 
 set(CMAKE_C_STANDARD 17)

@@ -4,11 +4,10 @@
 
 #include "filePath.h"
 
-const char * filePath_fullName = "E:\\Project\\Fsoft Embedded training course\\Students - management - software\\studentsManagementSoftware\\dataStorage\\fullName.txt";
-const char * filePath_birthYear = "../studentsManagementSoftware/dataStorage/birthYear.txt";
-const char * filePath_cumulativeScore = "../studentsManagementSoftware/dataStorage/cumulativeScore.dat";
-const char * filePath_department ="../studentsManagementSoftware/dataStorage/department.dat";
-const char * filePath_entryScores = "../studentsManagementSoftware/dataStorage/entryScores.dat";
-const char * filePath_homeTown = "../studentsManagementSoftware/dataStorage/homeTown.dat";
-const char * filePath_majors = "../studentsManagementSoftware/dataStorage/majors.dat";
-
+const char  filePath_name[] = "C:\\Users\\Admin\\Desktop\\testing_name.txt";
+const char  filePath_yob[] = "C:\\Users\\Admin\\Desktop\\testing_yob.txt";
+const char  filePath_pob[] = "C:\\Users\\Admin\\Desktop\\testing_pob.txt";
+const char  filePath_faculty[] = "C:\\Users\\Admin\\Desktop\\testing_faculty.txt";
+const char  filePath_department[] = "C:\\Users\\Admin\\Desktop\\testing_department.txt";
+const char  filePath_entrance_s[] = "C:\\Users\\Admin\\Desktop\\testing_entrance_s.txt";
+const char  filePath_gpa[] = "C:\\Users\\Admin\\Desktop\\testing_gpa.txt";

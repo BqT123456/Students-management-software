@@ -3,6 +3,8 @@
 //
 
 #include "u_menuModule.h"
+#include <ctype.h>
+#include <stdbool.h>
 #include "studentsManagementSoftware/u_displayModule/u_displayModule.h"
 #include "studentsManagementSoftware/u_sortModule/u_sortModule.h"
 #include "studentsManagementSoftware/u_sortModule/u_sortModule.h"
@@ -11,7 +13,32 @@
 #include "studentsManagementSoftware/u_deleteModule/u_deleteModule.h"
 #include "studentsManagementSoftware/u_modifyModule/u_modifyModule.h"
 #include "studentsManagementSoftware/u_searchModule/u_searchModule.h"
-
+#include "studentsManagementSoftware/u_fileManipulateModule/u_fileManipulateModule.h"
+#define ARR_MAX 30
+#define ARR_SIZE_VARS 7 //size of ARR_SIZE_MAX variables
+#define MAX_STUDENT 20
+typedef struct {
+	int ID;
+	char name[ARR_MAX];
+	char yob[ARR_MAX];
+	char pob[ARR_MAX];
+	char faculty[ARR_MAX];
+	char department[ARR_MAX];
+	char entrance_s[ARR_MAX];
+	char gpa[ARR_MAX];
+}Student;
+/*-------------------------Note: full char[] except ID----------------------------------*/
+typedef struct {
+	int name;
+	int yob;
+	int pob;
+	int faculty;
+	int department;
+	int entrance_s;
+	int gpa;
+}ARR_SIZE;
+/*-------------------------Note: full int------------------------------------------*/
+/*strtof: string to float*/
 char menu_waitForInput()
 {
 	char menu_option;
@@ -22,7 +49,6 @@ char menu_waitForInput()
 
 void menu_mainMenu(list_T *mainBuffer, list_T *sreachBuffer)
 {
-
 	int Choice;
 	do
 	{
@@ -48,10 +74,9 @@ void menu_mainMenu(list_T *mainBuffer, list_T *sreachBuffer)
 			printAllBuffer_student(mainBuffer);
 			break;
 		case 2:
-			// todo: SaveData
+
 			break;
 		case 3:
-			// todo: loadData
 			break;
 		case 4:
 			// Menu Data Processing //

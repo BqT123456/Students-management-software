@@ -68,12 +68,35 @@ void init()
       add_addStudentData(&mainBuffer, &studentTestData[i]);
    }
 }
+student_T temp;
 
 int main()
 {
    init();
 
-   menu_mainMenu(&mainBuffer, &sreachBuffer);
+ // menu_mainMenu(&mainBuffer, &sreachBuffer);
+   
+ 
+   /*---------------------Save--------------------*/
+   
+   file_saveFile(&mainBuffer);
+   
+   /*---------------------Read--------------------*/
+   
+   unsigned int u4_totalStudent;
+   u4_totalStudent = list_size(&mainBuffer);
+   studentInputBuffer_T studentReadBuffer;
+
+   if (0 < u4_totalStudent){
+       for (unsigned int index = 0; index < u4_totalStudent; index++) {
+           file_read_aStudent(&studentReadBuffer, index);
+           temp = input_allocateData(&studentReadBuffer);
+           list_pushFront(&mainBuffer, temp);
+       }
+   }
+   else {
+       printf("There is no student to read\n");
+   }
 
    return 0;
 }

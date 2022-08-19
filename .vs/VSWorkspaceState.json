@@ -2,9 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\studentsManagementSoftware",
-    "\\studentsManagementSoftware\\u_displayModule",
+    "\\studentsManagementSoftware\\dataStorage",
+    "\\studentsManagementSoftware\\u_fileManipulateModule",
+    "\\studentsManagementSoftware\\u_inputModule",
+    "\\studentsManagementSoftware\\u_loadModule",
     "\\studentsManagementSoftware\\u_menuModule",
-    "\\studentsManagementSoftware\\u_sortModule",
+    "\\studentsManagementSoftware\\u_modifyModule",
+    "\\studentsManagementSoftware\\u_saveModule",
     "\\u_lib"
   ],
   "SelectedNode": "\\main.c",
